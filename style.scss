@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+:root {
+    --global--font-primary: 'Open Sans', sans-serif;
+    --global--font-secondary: 'Open Sans', sans-serif;
+    --global--color-background: white;
+    --global--color-light-gray: #f4f4f4;
+    --global--color-text: #2D2D2D;
+    --global--color-header-gray:#979797;
+    --global--color-white: #fff;
+     /* Main navigation */
+    --primary-nav--color-link-hover: var(--global--color-white);
+    --primary-nav--color-text: var(--global--color-primary);
+    --primary-nav--font-size: var(--global--font-size-md);
+    --primary-nav--color-link-hover: var(--global--color-white);
+    /* Spacing */
+    --global--spacing-unit: 20px;
+    --global--spacing-measure: unset;
+    --global--spacing-horizontal: 0;
+    --global--spacing-vertical: 30px;
+    /* Admin-bar height */
+    --global--admin-bar--height: 0px;
+    /* Header */
+    --branding--color-text: var(--global--color-primary);
+}
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.wp-custom-logo .site-header {
+  align-items: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-top: 0!important;
+  margin-bottom: 0!important;
+  background-color: var(--global--color-primary);
+  z-index: 2;
+
+}
+
+.primary-navigation a:hover,
+.primary-navigation a:link,
+.primary-navigation a:visited {
+	color: var(--primary-nav--color-link-hover);
+}
+
+.site-header,
+.site-main,
+.widget-area,
+.site-footer {
+	padding-top: 0;/*var(--global--spacing-vertical);*/
+	padding-bottom: var(--global--spacing-vertical);
+	margin-left: auto;
+	margin-right: auto;
+}
+.site-header{
+  position: sticky;
+  top: 0;
+}
+
+.primary-navigation {
+  position: absolute;
+  top: var(--global--admin-bar--height);
+  right: 0;
+  color: var(--primary-nav--color-text);
+  font-size: var(--primary-nav--font-size);
+  line-height: 1.15;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-right: 5%;
+}
+
+.site-branding {
+  color: var(--branding--color-text);
+  margin-right: 140px;
+  margin-left: 5%;
+}
